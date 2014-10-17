@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="Y:\DBWcfService" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="MeetingReportService.svc" publishTime="01/22/2013 12:22:39" />
+    <file relUrl="bin/DBWcfService.pdb" publishTime="04/02/2013 09:48:08" />
+    <file relUrl="bin/DBWcfService.dll" publishTime="04/02/2013 09:48:08" />
+    <file relUrl="CHService.svc" publishTime="01/22/2013 12:22:39" />
+    <file relUrl="Web.config" publishTime="04/02/2013 09:49:27" />
+    <file relUrl="DBService.svc" publishTime="01/22/2013 12:22:39" />
+    <file relUrl="MarketDataService.svc" publishTime="01/22/2013 12:22:39" />
+  </publishProfile>
+</publishData>

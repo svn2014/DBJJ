@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CHService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/CHService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/CHService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/CHService.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICHService_ExecuteSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQL" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_ExecuteSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetTradingDays_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradingDays" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetTradingDays_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradingDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetStockPrices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockPrices" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetStockPrices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStockPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetIndexPrices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexPrices" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetIndexPrices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetAShareStockList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAShareStockList" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetAShareStockList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAShareStockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetIndexWeights_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexWeights" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetIndexWeights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndexWeightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetSWIndustryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSWIndustryList" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetSWIndustryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSWIndustryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetFreeFloatCapital_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreeFloatCapital" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetFreeFloatCapital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreeFloatCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetChinaBondList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChinaBondList" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetChinaBondList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChinaBondListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetBlockTrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlockTrade" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetBlockTrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBlockTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarginTrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarginTrade" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarginTrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarginTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetStrangeTrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrangeTrade" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetStrangeTrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStrangeTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetRestrictStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictStock" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetRestrictStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRestrictStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarketNews_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketNews" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarketNews_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarketNewsContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketNewsContent" />
+  </wsdl:message>
+  <wsdl:message name="ICHService_GetMarketNewsContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketNewsContentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICHService">
+    <wsdl:operation name="ExecuteSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/ExecuteSQL" message="tns:ICHService_ExecuteSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/ExecuteSQLResponse" message="tns:ICHService_ExecuteSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingDays">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetTradingDays" message="tns:ICHService_GetTradingDays_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetTradingDaysResponse" message="tns:ICHService_GetTradingDays_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetStockPrices" message="tns:ICHService_GetStockPrices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetStockPricesResponse" message="tns:ICHService_GetStockPrices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexPrices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetIndexPrices" message="tns:ICHService_GetIndexPrices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetIndexPricesResponse" message="tns:ICHService_GetIndexPrices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAShareStockList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetAShareStockList" message="tns:ICHService_GetAShareStockList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetAShareStockListResponse" message="tns:ICHService_GetAShareStockList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexWeights">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetIndexWeights" message="tns:ICHService_GetIndexWeights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetIndexWeightsResponse" message="tns:ICHService_GetIndexWeights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSWIndustryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetSWIndustryList" message="tns:ICHService_GetSWIndustryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetSWIndustryListResponse" message="tns:ICHService_GetSWIndustryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreeFloatCapital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetFreeFloatCapital" message="tns:ICHService_GetFreeFloatCapital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetFreeFloatCapitalResponse" message="tns:ICHService_GetFreeFloatCapital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChinaBondList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetChinaBondList" message="tns:ICHService_GetChinaBondList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetChinaBondListResponse" message="tns:ICHService_GetChinaBondList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlockTrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetBlockTrade" message="tns:ICHService_GetBlockTrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetBlockTradeResponse" message="tns:ICHService_GetBlockTrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarginTrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetMarginTrade" message="tns:ICHService_GetMarginTrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetMarginTradeResponse" message="tns:ICHService_GetMarginTrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStrangeTrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetStrangeTrade" message="tns:ICHService_GetStrangeTrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetStrangeTradeResponse" message="tns:ICHService_GetStrangeTrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetRestrictStock" message="tns:ICHService_GetRestrictStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetRestrictStockResponse" message="tns:ICHService_GetRestrictStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketNews">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetMarketNews" message="tns:ICHService_GetMarketNews_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetMarketNewsResponse" message="tns:ICHService_GetMarketNews_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketNewsContent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICHService/GetMarketNewsContent" message="tns:ICHService_GetMarketNewsContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICHService/GetMarketNewsContentResponse" message="tns:ICHService_GetMarketNewsContent_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICHService" type="tns:ICHService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteSQL">
+      <soap:operation soapAction="http://tempuri.org/ICHService/ExecuteSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradingDays">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetTradingDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockPrices">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetStockPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexPrices">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetIndexPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAShareStockList">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetAShareStockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndexWeights">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetIndexWeights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSWIndustryList">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetSWIndustryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreeFloatCapital">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetFreeFloatCapital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChinaBondList">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetChinaBondList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlockTrade">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetBlockTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarginTrade">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetMarginTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStrangeTrade">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetStrangeTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRestrictStock">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetRestrictStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketNews">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetMarketNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketNewsContent">
+      <soap:operation soapAction="http://tempuri.org/ICHService/GetMarketNewsContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CHService">
+    <wsdl:port name="BasicHttpBinding_ICHService" binding="tns:BasicHttpBinding_ICHService">
+      <soap:address location="http://10.190.60.27/DBWcfService/CHService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

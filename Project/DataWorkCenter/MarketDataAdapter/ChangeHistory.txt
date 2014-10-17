@@ -1,0 +1,4 @@
+﻿1) AShareEODPrices: 
+	s_dq_pctchange
+	s_dq_avgprice: 指数没有
+	trading_status: 财汇没有

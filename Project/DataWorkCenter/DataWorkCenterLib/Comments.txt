@@ -1,0 +1,42 @@
+﻿注意数据比较：
+	日期型变量：20120910 or 9/10/2012，要求在结构体中转为日期型
+	数值型变量：单位是否一致，要求在结构体中转为基本单位：元，股等
+	字符型变量：空格影响，大小写影响
+	特殊事件：
+		停牌处理：所有数字沿用前一交易日数值；[Wind: 所有数字沿用前一交易日；CaiHui: 所有数字为0]
+
+功能：
+	增加标志位，标注为本地修改，不要再被改回去,opmode=2
+
+与Wind不一样的地方：
+	通用：
+		opdate, opmode
+	AShareDescription
+		s_info_listboard
+	AShareEODPrices
+		C_Col_Volume(单位不一样->股), C_Col_Amount(单位不一样->元), s_dq_tradestatus
+		复权价格都不一样
+		小数点后面位数不一样
+
+===============================================================
+新增数据源
+	[Oracle]配置连接
+	更新DATACENTERSRC
+
+新增数据表
+	1) 数据库：
+		复制Wind的SQL创建表
+		去掉GUID的主键要,改为有意义的主键；允许空值；
+		更新DATACENTERCONFIG
+
+	2) MarketDataAdapter
+		新增数据结构: PrimaryKey必须要有
+		新增方法: AMarketDataAdapter及子类(必要时创建常量)
+
+	3) DataWorkCenterLib
+		新增方法：IDataLoader及子类
+		新增方法：ADataLoader及子类(测试SQL语句)		
+		新增方法：IDataSaver及子类
+
+新增数据字段
+	更新MarketDataAdapter

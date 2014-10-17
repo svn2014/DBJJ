@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DBWcfService.DBService" CodeBehind="DBService.svc.cs" %>
