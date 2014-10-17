@@ -1,0 +1,95 @@
+===================================================================
+直接回归, N=30
+===================================================================
+rawdata=csvread('testdata.csv',1,1);	%读入数据
+y=rawdata(:,1);				%基金数据
+x1=rawdata(:,[3:25]);			%申万行业收益率数据
+x2=rawdata(:,2);			%国债指数收益率数据
+
+x=[ones(30,1),x1,x2];			%自变量矩阵
+A=[0,ones(1,24);zeros(24,1),-eye(24)];	%不等式约束条件
+B=[1;zeros(24,1)];
+[beta,SSR] = lsqlin(x,y,A,B);		%带约束的线性回归：最小二乘法
+SST=sum((y-mean(y)).^2);
+r_square = 1-SSR/SST;			%计算R^2
+
+===================================================================
+主成分分析后回归
+===================================================================
+[r,p]=corrcoef(x);			%检查相关系数矩阵
+[si, sj]=find(p>0.05 & p<1);		%检查p值显著性
+
+[coeff,score,latent,tsquared,explained] = pca(x1);	%主成分分析
+To skip any of the outputs, you can use ~ instead in the corresponding element
+
+
+===================================================================
+LPPL
+===================================================================
+%2006-06-14 to 2007-09-28, P=Close
+data = csvread('data\index.csv',1,2);
+P=data(1671:1790,4);
+
+syms t m w;
+LNP=log(P);
+N=length(LNP);
+T=[1:N]';
+F=(t-T).^m;
+G=F.*cos(w*log(t-T));
+H=F.*sin(w*log(t-T));
+
+sumf=sum(F);
+sumg=sum(G);
+sumh=sum(H);
+sumff=sum(F.*F);
+sumfg=sum(F.*G);
+sumfh=sum(F.*H);
+sumgg=sum(G.*G);
+sumgh=sum(G.*H);
+sumhh=sum(H.*H);
+sumy=sum(LNP);
+sumyf=sum(LNP.*F);
+sumyg=sum(LNP.*G);
+sumyh=sum(LNP.*H);
+
+%以下方法内存不够
+%X=[N sumf sumg sumh;sumf sumff sumfg sumfh; sumg sumfg sumgg sumgh;sumh sumfh sumgh sumhh];
+%Y=[sumy;sumyf;sumyg;sumyh];
+
+syms sf sg sh sff sfg sfh sgg sgh shh sy syf syg syh;
+X=[N sf sg sh;sf sff sfg sfh;sg sfg sgg sgh;sh sfh sgh shh];
+Y=[sy;syf;syg;syh];
+ABCD=X\Y 
+%ABCD=linsolve(X,Y);
+A=ABCD(1);B=ABCD(2);C=ABCD(3);D=ABCD(4);
+
+model=@(w,m,t,x)(A+B*(t-x)^m+C*(t-x)^m*cos(w*log(t-x))+D*(t-x)^m*sin(w*log(t-x)));
+x0=[8;0.5;120];
+[beta,resnorm] = lsqcurvefit(model,x0,T,LNP);
+
+
+model=subs(model,'A',A);
+model=subs(model,'B',B);
+model=subs(model,'C',C);
+model=subs(model,'D',D);
+model=subs(model,'sf',sumf);
+model=subs(model,'sg',sumg);
+model=subs(model,'sh',sumh);
+model=subs(model,'sff',sumff);
+model=subs(model,'sfg',sumfg);
+model=subs(model,'sfh',sumfh);
+model=subs(model,'sgg',sumgg);
+model=subs(model,'sgh',sumgh);
+model=subs(model,'shh',sumhh);
+model=subs(model,'sy',sumy);
+model=subs(model,'syf',sumyf);
+model=subs(model,'syg',sumyg);
+model=subs(model,'syh',sumyh);
+
+=============================================================
+xdata = [0.9 1.5 13.8 19.8 24.1 28.2 35.2 60.3 74.6 81.3];
+ydata = [455.2 428.6 124.1 67.3 43.2 28.1 13.1 -0.4 -1.3 -1.5];
+model=@(para,x)(para(1)*log(x)+para(2));
+para0=[100,100];
+[x,resnorm] =lsqcurvefit(model,para0,xdata,ydata);
+x
