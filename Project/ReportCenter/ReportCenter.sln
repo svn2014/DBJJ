@@ -1,0 +1,109 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PortfolioReport", "..\PortfolioReport\", "{97FB5D0D-E26D-4E20-9D20-C45749B13318}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{47242CE8-A272-4670-89B9-805E01E9029E}|PortfolioEvaluation.dll;{E3F96FF3-B604-4B04-9493-B90E42707B75}|RiskMonitor.dll;{42368129-3431-44D1-991D-8018AAB89034}|Security.dll;{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}|PortfolioAnalyze.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/PortfolioReport"
+		Debug.AspNetCompiler.PhysicalPath = "..\PortfolioReport\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PortfolioReport\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PortfolioReport"
+		Release.AspNetCompiler.PhysicalPath = "..\PortfolioReport\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PortfolioReport\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1512"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioEvaluation", "..\PortfolioEvaluation\PortfolioEvaluation.csproj", "{47242CE8-A272-4670-89B9-805E01E9029E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GZBViewer", "GZBViewer\GZBViewer.csproj", "{7D3661F6-F760-43C6-8310-B81BA0B20948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskMonitor", "..\RiskMonitor\RiskMonitor\RiskMonitor.csproj", "{E3F96FF3-B604-4B04-9493-B90E42707B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "..\Security\Security\Security.csproj", "{42368129-3431-44D1-991D-8018AAB89034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioAnalyze", "..\RiskMonitor\PortfolioAnalyze\PortfolioAnalyze.csproj", "{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{97FB5D0D-E26D-4E20-9D20-C45749B13318}.Release|x86.ActiveCfg = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{47242CE8-A272-4670-89B9-805E01E9029E}.Release|x86.ActiveCfg = Release|Any CPU
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Debug|x86.ActiveCfg = Debug|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Debug|x86.Build.0 = Debug|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Release|Any CPU.ActiveCfg = Release|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Release|Mixed Platforms.Build.0 = Release|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Release|x86.ActiveCfg = Release|x86
+		{7D3661F6-F760-43C6-8310-B81BA0B20948}.Release|x86.Build.0 = Release|x86
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E3F96FF3-B604-4B04-9493-B90E42707B75}.Release|x86.ActiveCfg = Release|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{42368129-3431-44D1-991D-8018AAB89034}.Release|x86.ActiveCfg = Release|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E2479F0F-CE15-4743-B9E0-4A2B0AA73FF4}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

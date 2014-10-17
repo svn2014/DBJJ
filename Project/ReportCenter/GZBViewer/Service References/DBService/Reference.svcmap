@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2ac7dd2-5827-4f21-bae2-c798fb00275a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.190.60.27/dbwcfservice/dbservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DBService.xsd" MetadataType="Schema" ID="2e001e51-807c-4775-b7dd-afc79237d86e" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DBService1.xsd" MetadataType="Schema" ID="822a0995-edb6-408e-8cae-965e5a794465" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DBService.wsdl" MetadataType="Wsdl" ID="9058a431-01f8-4bbe-9af0-421bb38dc781" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?wsdl" />
+    <MetadataFile FileName="DBService2.xsd" MetadataType="Schema" ID="78464897-8a66-4ac8-9346-8a1002faba31" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DBService3.xsd" MetadataType="Schema" ID="94fabb9a-fbc5-4423-a181-5d256b5430a2" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DBService.disco" MetadataType="Disco" ID="17e3ecf7-6f00-4b0f-9548-256fb9797d95" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?disco" />
+    <MetadataFile FileName="DBService4.xsd" MetadataType="Schema" ID="f5ca3468-68bc-435a-a958-af0ac7823491" SourceId="1" SourceUrl="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

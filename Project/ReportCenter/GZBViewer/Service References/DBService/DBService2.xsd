@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DBWcfService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DBWcfService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+  <xs:complexType name="ArrayOfProcedureParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcedureParameter" nillable="true" type="tns:ProcedureParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcedureParameter" nillable="true" type="tns:ArrayOfProcedureParameter" />
+  <xs:complexType name="ProcedureParameter">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data" minOccurs="0" name="Direction" type="q1:ParameterDirection" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="tns:ProcedureParameter.DBType" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcedureParameter" nillable="true" type="tns:ProcedureParameter" />
+  <xs:simpleType name="ProcedureParameter.DBType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Bit" />
+      <xs:enumeration value="Char" />
+      <xs:enumeration value="VarChar" />
+      <xs:enumeration value="NVarChar" />
+      <xs:enumeration value="NClob" />
+      <xs:enumeration value="Float" />
+      <xs:enumeration value="Int" />
+      <xs:enumeration value="BigInt" />
+      <xs:enumeration value="Date" />
+      <xs:enumeration value="DateTime" />
+      <xs:enumeration value="Cursor" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProcedureParameter.DBType" nillable="true" type="tns:ProcedureParameter.DBType" />
+</xs:schema>

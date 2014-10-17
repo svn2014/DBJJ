@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DBService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DBWcfService" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://10.190.60.27/DBWcfService/DBService.svc?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDBService_ExecuteNonQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_ExecuteNonQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_ExecuteStoredProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteStoredProcedure" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_ExecuteStoredProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteStoredProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_ExecuteSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQL" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_ExecuteSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetWebConfigsByProject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebConfigsByProject" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetWebConfigsByProject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebConfigsByProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetHomeSiteIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeSiteIP" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetHomeSiteIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeSiteIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAlternativeSiteIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlternativeSiteIP" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAlternativeSiteIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlternativeSiteIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAuthrizationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthrizationCode" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAuthrizationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthrizationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAnalysts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnalysts" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetAnalysts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnalystsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetHedgeFunds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHedgeFunds" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetHedgeFunds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHedgeFundsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetPortfolios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortfolios" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetPortfolios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortfoliosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetPortfolioBenchmarks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortfolioBenchmarks" />
+  </wsdl:message>
+  <wsdl:message name="IDBService_GetPortfolioBenchmarks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPortfolioBenchmarksResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDBService">
+    <wsdl:operation name="ExecuteNonQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/ExecuteNonQuery" message="tns:IDBService_ExecuteNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/ExecuteNonQueryResponse" message="tns:IDBService_ExecuteNonQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteStoredProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/ExecuteStoredProcedure" message="tns:IDBService_ExecuteStoredProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/ExecuteStoredProcedureResponse" message="tns:IDBService_ExecuteStoredProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/ExecuteSQL" message="tns:IDBService_ExecuteSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/ExecuteSQLResponse" message="tns:IDBService_ExecuteSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebConfigsByProject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetWebConfigsByProject" message="tns:IDBService_GetWebConfigsByProject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetWebConfigsByProjectResponse" message="tns:IDBService_GetWebConfigsByProject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeSiteIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetHomeSiteIP" message="tns:IDBService_GetHomeSiteIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetHomeSiteIPResponse" message="tns:IDBService_GetHomeSiteIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlternativeSiteIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetAlternativeSiteIP" message="tns:IDBService_GetAlternativeSiteIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetAlternativeSiteIPResponse" message="tns:IDBService_GetAlternativeSiteIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthrizationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetAuthrizationCode" message="tns:IDBService_GetAuthrizationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetAuthrizationCodeResponse" message="tns:IDBService_GetAuthrizationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetAnalysts" message="tns:IDBService_GetAnalysts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetAnalystsResponse" message="tns:IDBService_GetAnalysts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHedgeFunds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetHedgeFunds" message="tns:IDBService_GetHedgeFunds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetHedgeFundsResponse" message="tns:IDBService_GetHedgeFunds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortfolios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetPortfolios" message="tns:IDBService_GetPortfolios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetPortfoliosResponse" message="tns:IDBService_GetPortfolios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPortfolioBenchmarks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDBService/GetPortfolioBenchmarks" message="tns:IDBService_GetPortfolioBenchmarks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDBService/GetPortfolioBenchmarksResponse" message="tns:IDBService_GetPortfolioBenchmarks_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDBService" type="tns:IDBService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/IDBService/ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteStoredProcedure">
+      <soap:operation soapAction="http://tempuri.org/IDBService/ExecuteStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSQL">
+      <soap:operation soapAction="http://tempuri.org/IDBService/ExecuteSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebConfigsByProject">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetWebConfigsByProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeSiteIP">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetHomeSiteIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlternativeSiteIP">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetAlternativeSiteIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthrizationCode">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetAuthrizationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnalysts">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetAnalysts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHedgeFunds">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetHedgeFunds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortfolios">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetPortfolios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPortfolioBenchmarks">
+      <soap:operation soapAction="http://tempuri.org/IDBService/GetPortfolioBenchmarks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBService">
+    <wsdl:port name="BasicHttpBinding_IDBService" binding="tns:BasicHttpBinding_IDBService">
+      <soap:address location="http://10.190.60.27/DBWcfService/DBService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
